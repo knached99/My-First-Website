@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+  <meta charset = "utf-8">
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+
+    <title>www.ExpertParking.com</title>
+    <link rel ="stylesheet" type ="text/css" href = "static/styles/loginPage.css">
+    <script type ="text/javascript" charset="utf-8" src ="loginValidate.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li><a href = "{{ url_for('home')}}">Home</a><i class ="fa fa-fw fa-home"></a></li>
+      <li><a href = "{{ url_for('contactUs')}}">Contact Us</a><i class ="fa fa-fw-envelope"</a></li>
+      <li><a href = "{{ url_for('signUp')}}">Sign Up</a></li>
+    <div class ="formWrapper">
+      <h1>
+      Member Login
+      </h1>
+      <form id ="lognPage" onsubmit="return validateLogin()">
+        <div class ="inputField">
+          <input type ="text" placeholder="username" id ="userName">
+        </div>
+        <div class ="inputField">
+          <input type ="password" placeholder="password" id ="passWord">
+        </div>
+        <div class ="submitButton">
+          <input type ="submit" value ="Login">
+        </div>
+        <div id ="forgotLogin">
+        Forgot Password?<a href ="forgotLogin.html" id="hrefStyle"> Click Here </a>
+        </div>
+      </form>
+    </div>
+    </body>
+</html>

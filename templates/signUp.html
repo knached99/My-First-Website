@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+  <meta charset = "utf-8">
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+
+    <title>www.ExpertParking.com</title>
+    <link rel ="stylesheet" type ="text/css" href = "static/styles/signUp.css">
+    <script type ="text/javascript" charset="utf-8" src ="signUpValidate.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li><a href = "{{ url_for('home')}}">Home</a><i class ="fa fa-fw fa-home"></li>
+      <li><a href = "{{ url_for('contactUs')}}">Contact Us</a><i class ="fa fa-fw-envelope"</li>
+      <li><a href = "{{ url_for('signUp')}}">Sign Up</a></li>
+    <div class ="formWrapper">
+      <h1>
+        Sign Up Form
+      </h1>
+      <form id ="signUpForm" onsubmit="validateForm()">
+        <div class ="inputField">
+          <input type ="text" placeholder="username" id ="userName">
+        </div>
+        <div class ="inputField">
+          <input type ="text" placeholder="email" id ="email">
+        </div>
+        <div class ="inputField">
+          <input type ="password" placeholder="password" id="passWord">
+        </div>
+        <div class ="inputField">
+          <input type ="password" placeholder="repeat password" id ="passRepeat">
+        <div class ="submitButton">
+          <input type ="submit" value ="Sign Up!">
+        </div>
+        <div id ="copyRight">
+          &copy Copyright 2020 Expert Parking All Rights Reserved
+        </div>
+        <div id ="loginRedirect">
+          Already a member?<a href ="{{ url_for('login')}}" id ="href"> Log in </a>
+        </div>
+      </form>
+    </div>
+    </body>
+</html>
